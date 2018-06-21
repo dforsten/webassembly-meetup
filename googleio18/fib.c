@@ -10,7 +10,3 @@ int fib(int n) {
     }
     return b;
 }
-
-int main(int argc, char ** argv) {
-  printf("Fibonacci for 12: %d\n", fib(12));
-}
