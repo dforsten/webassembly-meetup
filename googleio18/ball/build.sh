@@ -1,0 +1,1 @@
+emcc -s WASM=1 -O3 -s EXTRA_EXPORTED_RUNTIME_METHODS='["cwrap"]' -o ball.js ball.cpp

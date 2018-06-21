@@ -6,3 +6,5 @@ googleio18/fib/fib\.js
 *.wasm
 
 \.idea/
+
+googleio18/ball/ball\.js
