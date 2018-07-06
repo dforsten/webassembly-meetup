@@ -3,7 +3,7 @@ title: WebAssembly with C++
 revealOptions:
     transition: 'slide'
 ---
-# WebAssembly
+## WebAssembly
 
 * A Web Standard available across all 4 major browsers
 * A binary (and corresponding text) format for executable code
@@ -13,7 +13,7 @@ revealOptions:
 
 ---
 
-# History and Present
+## History and Present
 
 * Preceeded by many vendor specific attempts to speed up Web Applications
   * NaCl
@@ -24,7 +24,7 @@ revealOptions:
 
 ---
 
-# Web Assembly Languages
+## Web Assembly Languages
 
 * WAT - Web Assembly Text Format
 * C/C++
@@ -35,7 +35,7 @@ revealOptions:
 
 ----
 
-## Web Assembly Text Format
+### Web Assembly Text Format
 
 ```
 (module
@@ -55,7 +55,7 @@ wat2wasm simple.wat -o simple.wasm
 
 ---
 
-# Development Environments
+## Development Environments
 
 * WebAssembly Studio
   * Missing C++ Support
@@ -64,11 +64,11 @@ wat2wasm simple.wat -o simple.wasm
 
 ---
 
-# Toolchain for C++
+## Toolchain for C++
 
 ----
 
-## Base Features
+### Base Features
 
 * C standard library
 * OpenGL (converted to WebGL calls)
@@ -77,7 +77,7 @@ wat2wasm simple.wat -o simple.wasm
 
 ----
 
-## Memory
+### Memory
 
 * Limited, linear memory space
   * Initial and optional maximum size specifyable
@@ -86,7 +86,7 @@ wat2wasm simple.wat -o simple.wasm
 
 ----
 
-## Emscripten
+### Emscripten
 
 * Use emcc to compile C++ code
 * Can target asm.js(default) and WebAssembly
@@ -94,7 +94,7 @@ wat2wasm simple.wat -o simple.wasm
 
 ----
 
-## Building Wasm
+### Building Wasm
 
 ```
 emcc -s WASM=1 -o hello.html hello.c
@@ -105,7 +105,7 @@ emcc -s WASM=1 -o hello.html hello.c
 
 ----
 
-## Running Wasm
+### Running Wasm
 
 ```
 emrun --port 8081 hello.html
@@ -115,7 +115,7 @@ emrun --port 8081 hello.html
 
 ----
 
-## Simple Worked Example
+### Simple Worked Example
 
 ```
 #include <stdio.h>
@@ -143,7 +143,7 @@ Use "EMSCRIPTEN_KEEPALIVE" macro to force the compiler to include the function e
 
 ----
 
-## Calling C/C++ functions from JavaScript (continued...)
+### Calling C/C++ functions from JavaScript (continued...)
 
 ```
 const fib = Module.cwrap('fib', 'number', ['number']);
@@ -156,7 +156,7 @@ const fib = Module.cwrap('fib', 'number', ['number']);
 
 ----
 
-## Calling C/C++ functions from JavaScript (continued...)
+### Calling C/C++ functions from JavaScript (continued...)
 
 Compile using:
 
@@ -185,7 +185,7 @@ EM_JS(void, drawCircle, (float y, float x, float r), {
 
 ----
 
-## Calling JavaScript from C++ (continued...)
+### Calling JavaScript from C++ (continued...)
 
 * Then just call the function in C++ code:
 
