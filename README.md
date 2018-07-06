@@ -1,1 +1,1 @@
-For exploring WebAssembly with C++ and Rust
+Slides and code examples for the C++ User Group Graz Meetup on WebAssembly
