@@ -1,1 +1,1 @@
-Slides and code examples for the C++ User Group Graz Meetup on WebAssembly
+Slides and sample code examples for the C++ User Group Graz [Meetup on WebAssembly](https://www.meetup.com/de-DE/Graz-Qt-C-11-Meetup/events/251106970/)
